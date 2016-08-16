@@ -8,6 +8,14 @@
 #
 # For more info see: http://lwn.net/Articles/143397/
 #
+# Usage: Try removing the USB-Storage and USB-Ethernet devic form 9$ CHIP computer
+# usbdev_add_remove_helper.sh  usb-storage r8152
+# ./tmp/usb-storage.unbind.sh
+# ./tmp/r8152.unbind.sh
+# #---- After some time , when you want devices to be ready again
+# ./tmp/usb-storage.bind.sh
+# ./tmp/r8152.bind.sh
+#
 #set -x
 driver_root=/sys/bus/usb/drivers;
 wh=./tmp
